@@ -9,8 +9,8 @@
 
     <VideoView
         android:id="@+id/videoView2"
-        android:layout_width="335dp"
-        android:layout_height="610dp"
+        android:layout_width="387dp"
+        android:layout_height="693dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
