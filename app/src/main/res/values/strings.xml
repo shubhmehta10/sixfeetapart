@@ -1,0 +1,15 @@
+<resources>
+<!--    <string name="app_name">6APART</string>-->
+    <string name="video">VIDEO</string>
+    <string name="photo">PHOTO</string>
+    <string name="app_name">Social Distance Tracker</string>
+<!--    <string name="classify">Classify Image</string>-->
+<!--    <string name="back">Back</string>-->
+<!--    <string name="label">Labels</string>-->
+<!--    <string name="confidence">Confidence</string>-->
+<!--    <string name="_1">1.</string>-->
+<!--    <string name="_2">2.</string>-->
+<!--    <string name="_3">3.</string>-->
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+</resources>
