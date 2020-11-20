@@ -12,8 +12,12 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -53,6 +57,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public class MyClass {
+        public void printvariableToFile (String fileName, String myVariable) {
+            File myFile;
+            myFile=new File(fileName);
+            if(!myFile.exists()){
+                try {
+                    myFile.createNewFile();
+                    FileWriter fw = new FileWriter(fileName);
+                    PrintWriter pw = new PrintWriter(fw);
+                    // Write variable to file
+                    pw.print("Writing variable to file");
+                    pw.println("The varible is below: ");
+                    pw.println(myVariable);
+                    // Close
+                    pw.close();
+                } catch (Exception ex){
+                   // Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
     //trying to run python file
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
