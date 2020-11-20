@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == RESULT_OK) {
             Uri videoUri = data.getData();
-            result_video.setVideoURI(videoUri);
+            videoView.setVideoURI(videoUri);
             videoPath = getUrlFromUri(videoUri);
             param = getFileName(videoPath);
             String command = "python /c start python C:\\Users\\LENOVO\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\assets\\SocialDistancingDetector.py";
