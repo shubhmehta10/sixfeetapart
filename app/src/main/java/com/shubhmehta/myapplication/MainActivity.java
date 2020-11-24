@@ -127,27 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public class MyClass {
-        public void printvariableToFile (String fileName, String myVariable) {
-            File myFile;
-            myFile=new File(fileName);
-            if(!myFile.exists()){
-                try {
-                    myFile.createNewFile();
-                    FileWriter fw = new FileWriter(fileName);
-                    PrintWriter pw = new PrintWriter(fw);
-                    // Write variable to file
-                    pw.print("Writing variable to file");
-                    pw.println("The varible is below: ");
-                    pw.println(myVariable);
-                    // Close
-                    pw.close();
-                } catch (Exception ex){
-                   // Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-    }
+
     //trying to run python file
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -157,13 +137,15 @@ public class MainActivity extends AppCompatActivity {
             videoView.setVideoURI(videoUri);
             videoPath = getUrlFromUri(videoUri);
             param = getFileName(videoPath);
-            String command = "python /c start python C:\\Users\\LENOVO\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\assets\\SocialDistancingDetector.py";
+            String command = "python /c start python C:\\Users\\LENOVO\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\java\\com\\shubhmehta\\myapplication\\SocialDistancingDetector.py";
             try {
-                Process p = Runtime.getRuntime().exec("C:\\Users\\LENOVO\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\assets\\SocialDistancingDetector.py" + param );
+                Process p = Runtime.getRuntime().exec("C:\\Users\\LENOVO\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\java\\com\\shubhmehta\\myapplication\\SocialDistancingDetector.py" + param );
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+        MyClass myclass = new MyClass();
+        myclass.printvariableToFile("inputfile.txt",param);
     }
 
     //method to get url of recorded video
@@ -182,3 +164,4 @@ public class MainActivity extends AppCompatActivity {
         return pathArray[pathArray.length-1];
     }
 }
+
