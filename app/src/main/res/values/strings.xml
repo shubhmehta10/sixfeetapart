@@ -12,4 +12,5 @@
     <!--    <string name="_3">3.</string>-->
     <string name="todo">TODO</string>
     <string name="todo2">TODO</string>
+    <string name="read_file" />
 </resources>
