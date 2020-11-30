@@ -160,32 +160,14 @@ public class MainActivity extends AppCompatActivity {
             videoPath = getRealPathFromURIPath(videoUri, MainActivity.this);
             //param = getFileName(videoPath);
             uploadVideoToServer(videoPath);
+            loading loading = new loading(MainActivity.this);
+            loading.startLoadingDialog();
             //   downloadFile();
 
         }
 
     }
 
-//            String command = "python /c start python C:\\Users\\LENOVO\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\java\\com\\shubhmehta\\myapplication\\SocialDistancingDetector.py";
-//            try {
-//                Process p = Runtime.getRuntime().exec("C:\\Users\\LENOVO\\AndroidStudioProjects\\MyApplication\\app\\src\\main\\java\\com\\shubhmehta\\myapplication\\SocialDistancingDetector.py" + param );
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-
-    // MyClass myclass = new MyClass();
-    // myclass.printvariableToFile("inputfile.txt",param);
-
-
-    //method to get url of recorded video
-//    public String getUrlFromUri(Uri contentUri){
-//        String[] proj = { MediaStore.Images.Media.DATA };
-//        Cursor cursor = managedQuery(contentUri,proj,null,null,null);
-//        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-//        cursor.moveToFirst();
-//        return cursor.getString(column_index);
-//
-//    }
 
     public String getRealPathFromURIPath(Uri contentURI, Activity activity) {
         Cursor cursor = activity.getContentResolver().query(contentURI, null, null, null, null);
@@ -213,14 +195,14 @@ public class MainActivity extends AppCompatActivity {
 //        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         final OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 //.addInterceptor(logging)
-                .connectTimeout(120, TimeUnit.SECONDS)
-                .writeTimeout(120, TimeUnit.SECONDS)
-                .readTimeout(120, TimeUnit.SECONDS)
+                .connectTimeout(600, TimeUnit.SECONDS)
+                .writeTimeout(600, TimeUnit.SECONDS)
+                .readTimeout(600, TimeUnit.SECONDS)
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl("https://1e7486343ff0.ngrok.io/")
+                .baseUrl("https://b679f35a5a4f.ngrok.io/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         VideoInterface vInterface = retrofit.create(VideoInterface.class);
@@ -243,35 +225,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    //    private void downloadFile() {
-//
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl(SERVER_PATH)
-//                .build();
-//
-//        InputInterface handlerService = retrofit.create(InputInterface.class);
-//
-//        Call<ResponseBody> call = handlerService.downloadFileByUrl(SERVER_PATH);
-//        call.enqueue(new Callback<ResponseBody>() {
-//            @Override
-//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//                if (response.isSuccessful()) {
-//                    if (writeResponseBodyToDisk(response.body())) {
-//                       // listener.onFileLoaded(file);
-//                    }
-//                } else {
-//                    //listener.onDownloadFailed("Resource not Found");
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseBody> call, Throwable t) {
-//                //listener.onDownloadFailed("Download Failed");
-//                t.printStackTrace();
-//            }
-//        });
-//    }
     private void savingFile(String base64) {
         //File file = new File(getExternalFilesDir(null) + File.separator + "Output.mp4");
 
