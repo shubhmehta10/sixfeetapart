@@ -161,8 +161,7 @@ public class MainActivity extends AppCompatActivity {
             //param = getFileName(videoPath);
             uploadVideoToServer(videoPath);
             //   downloadFile();
-            Intent intent = new Intent(this, OutputModel.class);
-            startActivity(intent);
+
         }
 
     }
@@ -221,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl(" https://ef1ec303e0fe.ngrok.io/")
+                .baseUrl("https://1e7486343ff0.ngrok.io/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         VideoInterface vInterface = retrofit.create(VideoInterface.class);
@@ -286,6 +285,8 @@ public class MainActivity extends AppCompatActivity {
             FileOutputStream out = new FileOutputStream(Environment.getExternalStorageDirectory() + "/Output.mp4");
             out.write(decodedBytes);
             out.close();
+            Intent intent = new Intent(this, OutputModel.class);
+            startActivity(intent);
         } catch (Exception e) {
             // TODO: handle exception
             Log.e("Error", e.toString());

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.widget.VideoView;
 
 public class OutputModel extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class OutputModel extends AppCompatActivity {
                 videoView.start(); //need to make transition seamless.
             }
         });
-        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.logo1); //set the path of the video that we need to use in our VideoView
+        videoView.setVideoPath(Environment.getExternalStorageDirectory() + "/Output.mp4"); //set the path of the video that we need to use in our VideoView
         videoView.start();
     }
 }
