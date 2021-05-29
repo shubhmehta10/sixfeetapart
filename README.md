@@ -19,7 +19,7 @@ The architecture of 6' APART APP is divided into three parts:
 2) The backend
 3) Integration of the ML model used for object detection and tracking.
 
-![architecture](\architecture.png)
+![architecture](https://user-images.githubusercontent.com/63549553/120079493-b73f2a00-c0d1-11eb-9625-b0c981cfa839.png)
 
 ## LOCAL SETUP 
 ```bash
@@ -50,9 +50,9 @@ git push origin <branch-name>
 Meet the team.
 
 - Mihir Paghdal 
-  - [LinkedIn](https://www.linkedin.com/in/parinda-pranami-13943b1aa/)
+  - [LinkedIn](https://www.linkedin.com/in/mihir-paghdal)
 - Parinda Pranami
-  - [LinkedIn](https://www.linkedin.com/in/parinda-pranami-13943b1aa/)
+  - [LinkedIn](https://www.linkedin.com/in/parindapranami)
 - Shubh Mehta
-  - [LinkedIn](https://www.linkedin.com/in/parinda-pranami-13943b1aa/)
+  - [LinkedIn](https://www.linkedin.com/in/shubhmehta10/)
 
