@@ -21,6 +21,20 @@ The architecture of 6' APART APP is divided into three parts:
 
 ![architecture](https://user-images.githubusercontent.com/63549553/120079493-b73f2a00-c0d1-11eb-9625-b0c981cfa839.png)
 
+## DEMONSTRATION 
+Homescreen - 
+![homescreen](https://user-images.githubusercontent.com/63549553/120079585-29b00a00-c0d2-11eb-8c64-b3629895acd9.png)
+
+Capture video screen - 
+![capture-video](https://user-images.githubusercontent.com/63549553/120079613-52d09a80-c0d2-11eb-8e77-ef8993f04fdf.png)
+
+Video being processed by the ML model at server-
+![processing-video](https://user-images.githubusercontent.com/63549553/120079626-60862000-c0d2-11eb-92bc-f436ae363444.png)
+
+Final output/analysed video screen - 
+![analysed-video](https://user-images.githubusercontent.com/63549553/120079638-6e3ba580-c0d2-11eb-8657-0eba1887ad62.png)
+
+
 ## LOCAL SETUP 
 ```bash
 git clone https://github.com/shubhmehta10/sixfeetapart.git
