@@ -55,9 +55,9 @@ git commit -m "message"
 git push origin <branch-name>
 ```
 
-<!-- ### License 📜
+### License 📜
 
-- [MIT License](/LICENSE) -->
+- [MIT License](/LICENSE)
 
 ## _Authors_
 
