@@ -19,20 +19,26 @@ The architecture of 6' APART APP is divided into three parts:
 2) The backend
 3) Integration of the ML model used for object detection and tracking.
 
-![architecture](https://user-images.githubusercontent.com/63549553/120079493-b73f2a00-c0d1-11eb-9625-b0c981cfa839.png)
+<img src="https://user-images.githubusercontent.com/63549553/120079493-b73f2a00-c0d1-11eb-9625-b0c981cfa839.png" width='700' height='250'>
 
-## DEMONSTRATION 
+
+## DEMONSTRATION
+
 Homescreen - 
-![homescreen](https://user-images.githubusercontent.com/63549553/120079585-29b00a00-c0d2-11eb-8c64-b3629895acd9.png)
+
+<img src="https://user-images.githubusercontent.com/63549553/120079585-29b00a00-c0d2-11eb-8c64-b3629895acd9.png" width='250' height='500'>
 
 Capture video screen - 
-![capture-video](https://user-images.githubusercontent.com/63549553/120079613-52d09a80-c0d2-11eb-8e77-ef8993f04fdf.png)
+
+<img src="https://user-images.githubusercontent.com/63549553/120079613-52d09a80-c0d2-11eb-8e77-ef8993f04fdf.png" width='250' height='500'>
 
 Video being processed by the ML model at server-
-![processing-video](https://user-images.githubusercontent.com/63549553/120079626-60862000-c0d2-11eb-92bc-f436ae363444.png)
+
+<img src="https://user-images.githubusercontent.com/63549553/120079626-60862000-c0d2-11eb-92bc-f436ae363444.png" width='250' height='500'>
 
 Final output/analysed video screen - 
-![analysed-video](https://user-images.githubusercontent.com/63549553/120079638-6e3ba580-c0d2-11eb-8657-0eba1887ad62.png)
+
+<img src="https://user-images.githubusercontent.com/63549553/120079638-6e3ba580-c0d2-11eb-8657-0eba1887ad62.png" width='250' height='500'>
 
 
 ## LOCAL SETUP 
